@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI  Collections</title>
+    <title>AI Collections</title>
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;  /* változtatva 'min-height'-ra */
             margin: 0;
             font-family: Arial, sans-serif;
-            overflow: hidden;
         }
 
         .container {
             display: flex;
             width: 100vw;
-            height: 100vh;
+            min-height: 100vh;  /* változtatva 'min-height'-ra */
         }
 
         .advert {
@@ -48,15 +48,44 @@
             cursor: pointer;
             text-align: center;
             transition: background-color 0.3s ease;
-            border-radius: 8px; /* Lekerekített sarkok */
-            width: 80%; /* Gombok szélességének csökkentése */
+            border-radius: 8px;
+            width: 80%;
         }
 
         .btn:hover {
             background-color: #0056b3;
         }
+
+        /* Tablet eszközök számára */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .advert {
+                width: 100%;
+                height: auto;
+            }
+
+            .buttons {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobil eszközök számára */
+        @media (max-width: 480px) {
+            .buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                padding: 20px 10px;
+            }
+        }
+
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="advert"></div>
@@ -82,4 +111,5 @@
         <div class="advert"></div>
     </div>
 </body>
+
 </html>
