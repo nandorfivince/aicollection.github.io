@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reklámok és Gombok Weboldala</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .advert {
+            width: 10%;
+            height: 100%;
+            background-color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .buttons {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 20px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="advert"></div>
+        <div class="buttons">
+            <button class="btn" onclick="window.open('https://chat.openai.com/auth/login')">ChatGpt</button>
+            <button class="btn" onclick="window.open('https://www.fotor.com/features/background-remover')">background-remover</button>
+            <button class="btn" onclick="window.open('https://www.midjourney.com/home/?callbackUrl=%2Fapp%2F')">midjourney</button>
+            <button class="btn" onclick="window.open('https://www.jasper.ai/')">jasper</button>
+            <button class="btn" onclick="window.open('https://www.synthesia.io/')">synthesia</button>
+            <button class="btn" onclick="window.open('https://www.beautiful.ai/')">beautiful.ai</button>
+            <button class="btn" onclick="window.open('https://www.notion.so/')">notion</button>
+            <button class="btn" onclick="window.open('https://soundraw.io/')">soundraw</button>
+            <button class="btn" onclick="window.open('https://photoai.com/ai-avatars?ref=avatarai')">photoai avatar</button>
+            <button class="btn" onclick="window.open('https://letsenhance.io/')">letsenhance</button>
+        </div>
+        <div class="advert"></div>
+    </div>
+</body>
+</html>
