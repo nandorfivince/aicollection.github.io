@@ -13,6 +13,7 @@
             min-height: 100vh;  /* változtatva 'min-height'-ra */
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #000;
         }
 
         .container {
@@ -24,7 +25,7 @@
         .advert {
             width: 10%;
             height: 100%;
-            background-color: #eee;
+            background-color: #000;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -69,6 +70,7 @@
 
             .buttons {
                 grid-template-columns: repeat(2, 1fr);
+                justify-items: center;
             }
         }
 
@@ -85,6 +87,22 @@
         }
 
     </style>
+
+    <!-- Itt kezdődik a hozzáadott JavaScript kód -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var buttons = document.querySelectorAll('.btn');
+            buttons.forEach(function(button) {
+                button.addEventListener('mousedown', function(e) {
+                    if (e.which === 2 || e.button === 1) {  // Középső egérgomb detektálása
+                        e.preventDefault();  // Alapértelmezett esemény megakadályozása
+                        window.open(this.getAttribute('onclick').split("'")[1]);
+                    }
+                });
+            });
+        });
+    </script>
+
 </head>
 
 <body>
